@@ -47,7 +47,7 @@ contract InvoiceData {
             return ("Invoice not paid");
         }
     }
- 
+
     function getInvoicesByBuyer(string memory _buyerPAN) public view returns(Invoice[] memory) {
         return(invoicesByBuyer[_buyerPAN]);
     }

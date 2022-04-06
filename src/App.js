@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { ethers } from 'ethers'
 import InvoiceData from './artifacts/contracts/InvoiceData.sol/InvoiceData.json'
 
-const invoicedataAddress = "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707";
+const invoicedataAddress = "0xd077ccA0637FBB4770D0e90fcc3403158989c489";
 
 function App() {
 
@@ -51,7 +51,7 @@ function App() {
       const contract = new ethers.Contract(invoicedataAddress, InvoiceData.abi, provider)
       try {
         const invoices = await contract.getPaymentStatus(buyerPAN)
-        console.log(invoices)
+        console.log(invoices.toString())
       } catch (err) {
         console.log("Error: ", err)
       }

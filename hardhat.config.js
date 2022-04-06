@@ -22,8 +22,10 @@ module.exports = {
     artifacts: './src/artifacts',
   },
   networks: {
-    hardhat: {
-      chainId: 1337
+    hardhat: {},
+    polygon_mumbai: {
+      url: "Project URL",
+      accounts: [`Private Key`]
     }
   }
 };
